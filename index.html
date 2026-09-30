@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CRASH: Cultural Heritage Advanced Search Hackathon</title>
+<meta name="description" content="Two days of hacking on search in cultural heritage data. Graz, 30 November and 1 December 2026. Vibes and Checks.">
+<meta name="theme-color" content="#0a0d0b">
+<meta property="og:type" content="website">
+<meta property="og:title" content="CRASH: Cultural Heritage Advanced Search Hackathon">
+<meta property="og:description" content="Two days of hacking on search in cultural heritage data. Graz, 30 November and 1 December 2026. Vibes and Checks.">
+<meta property="og:url" content="https://crash-this.github.io/">
+<meta property="og:image" content="https://crash-this.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<script src="fx.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<div class="shell">
+<aside class="side">
+  <a class="home" href="#top">~/<b>crash</b>-2026</a>
+  <nav aria-label="Sections">
+    <a href="#why">why</a>
+    <a href="#tracks">vibes and checks</a>
+    <a href="#who">who can come</a>
+    <a href="#dataset">your dataset</a>
+    <a href="#schedule">schedule</a>
+    <a href="#dates">dates</a>
+    <a href="#travel">travel and accommodation</a>
+    <a href="#conduct">conduct</a>
+    <a href="#venue">venue</a>
+    <a href="#register" class="go">register</a>
+  </nav>
+  <div class="controls">
+    <p>effects</p>
+    <button type="button" data-set-fx="on">on</button><button type="button" data-set-fx="off">off</button>
+  </div>
+</aside>
+<div class="col">
+<header class="hero" id="top">
+  <h1 class="wordmark" aria-label="CRASH"><span class="g0" data-grade="g0">C</span><span class="g20" data-grade="g20">R</span><span class="g35" data-grade="g35">A</span><span class="g70" data-grade="g70">S</span><span class="g100" data-grade="g100">H</span></h1>
+  <p class="expansion"><b>C</b>ultu<b>r</b>al Herit<b>a</b>ge Advanced <b>S</b>earch <b>H</b>ackathon</p>
+  <dl class="man">
+    <dt>WHAT</dt><dd>two days of hacking on search in cultural heritage data</dd>
+    <dt>WHEN</dt><dd>30 November and 1 December 2026</dd>
+    <dt>WHERE</dt><dd>Graz, Austria</dd>
+    <dt>MOTTO</dt><dd class="motto">Vibes and Checks<span class="cursor" aria-hidden="true"></span></dd>
+  </dl>
+  <a class="button" href="#register">register --by 1-november</a>
+</header>
+
+<main id="main">
+
+<section id="why">
+  <h2>Why</h2>
+  <p>Search is at the heart of research. A researcher knows what a good search tool does
+  for them: it lets them move through a collection, it lets them steer the result, it is
+  fast, and it works on the next dataset as well. Research software often falls short at
+  this point.</p>
+  <p>Search is retrieval, and what a tool retrieves reflects the question: the results are
+  the items most similar to the query. Similarity is the first decision in every search
+  tool, and most tools make it for the user and hide it. But finding is only the start. A
+  good tool also shows why a result is there. It lets the user change what similar means
+  and see the results follow. It works for people who read with a screen reader or in
+  another language. It says what one search costs in time and energy. And now and then it
+  finds the thing nobody asked for. CRASH is about tools that do this work in the open, so
+  that the user can see it and steer it.</p>
+  <p>For two days, CRASH puts cultural heritage data and the people who care about it in
+  one room.</p>
+
+  <details id="manifesto">
+    <summary>Read the manifesto: Vibes and Checks</summary>
+    <h3>Search is the point</h3>
+    <p>How we search, and how we handle what we find, shapes how we think and work. A
+    search interface brings many decisions together in one place: how the data is
+    processed, how it is shown, how a person can take it in, and who has a say in all of
+    this.</p>
+    <p>The largest of these decisions is what counts as similar. Every search ranks its
+    results by some measure of closeness between the question and the items. The same
+    measure decides what a user sees next to a result, what a tool recommends, and what it
+    leaves out. In the digital humanities, this measure is a scholarly choice. Two
+    charters, two images or two texts can be similar in many ways, and each way answers a
+    different question. Sometimes the useful result is the dissimilar one, the item that
+    breaks the pattern. How to model similarity has been a question of information
+    retrieval since its beginnings, and it is still one of its most persistent ones. A
+    search interface that lets the user see and change this choice is rare.</p>
+    <p>Ranking is one part of a search tool. Whether a person can trust a result, steer the
+    tool, use it at all, and afford to run it, are the others. Research software and
+    research infrastructures have their gaps in all of these places.</p>
+    <h3>What changed</h3>
+    <p>Large language models and agents have reached many professions, and cultural
+    heritage is one of them. Everybody can build a search application in an afternoon
+    now. We think this is good, and we will build in the same way at this hackathon, with
+    code assistants and agents, used with care. We want actual hacking: work towards a
+    target, and sometimes work for the pleasure of building. Culture is fun, and the
+    digital humanities are the academic way to have that fun. We are interested in the
+    specific and the weird: the objects that are new even to the experts who work with
+    them every day.</p>
+    <h3>What goes wrong without shared ground</h3>
+    <p>Everybody can build their own tool, and many do. But the oldest question of software
+    remains: who is this for, and why? The people who use these tools know their limits by
+    now. Answers can be invented. The way to a result is hidden. The computation is
+    expensive. The same question gets a different answer on every run. The models show
+    their reasoning, but that reasoning explains little; it mostly reassures.</p>
+    <p>If every researcher works with their own agents, every agent follows its own rules.
+    Without shared rules, everybody arrives at their own truth, and we lose the ground on
+    which we can compare and argue.</p>
+    <h3>What a check is</h3>
+    <p>Cultural heritage has strong quantitative methods by now. They give us numbers for
+    what counts as similar or as relevant. But relevance is a matter of definition. It
+    depends on the signal we measure and on the context of that signal. Research on
+    recommender systems has developed many measures beyond accuracy: diversity, novelty,
+    coverage, fairness. The same is true for the other qualities of a tool. Whether an
+    explanation helps, whether a control is understood, whether a screen reader gets
+    through, and what a query costs, can all be tested.</p>
+    <p>So everything built at CRASH answers to a check. A check is a test that a team
+    designs for its own tool: what does it claim, and how can that claim be shown? We
+    check ourselves too. We measure the ecological footprint of the event, in CO2 and in
+    compute, and we publish the numbers.</p>
+    <h3>What we hope comes out</h3>
+    <p>Working prototypes, on real material, with a test beside each of them. A habit of
+    saying how a result was checked. And people who know each other afterwards and keep
+    building. On Tuesday the room and the jury each rank the prototypes, and the first
+    three places in each ranking get a prize. Everybody leaves with the same room, the same food and the same
+    clusters behind them. Bring your data, part of your team, and good vibes. We bring the
+    checks.</p>
+  </details>
+</section>
+
+<section id="tracks">
+  <h2>Vibes and Checks</h2>
+  <div class="tracks">
+    <div class="track">
+      <h3>Vibes</h3>
+      <p>Build what you want, with your team, your data and your problem.</p>
+      <p class="prize">Winner of hearts: the room.</p>
+    </div>
+    <div class="track">
+      <h3>Checks</h3>
+      <p>Pick one thing to do well, and show at the end how you checked it.</p>
+      <p class="prize">Winner of numbers: the jury.</p>
+    </div>
+  </div>
+  <p>Every team picks one focus area. In the final presentation, the team shows one check
+  for that area: what it tested, and how. There are two rankings, one by the room and one
+  by the jury, each with places one to three. The prizes are small and symbolic.</p>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Area</th><th>Question</th><th>Example of a check</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Efficiency</strong></td><td>What does one search cost?</td><td>time, compute and energy per query</td></tr>
+      <tr><td><strong>Trust</strong></td><td>Can I see why this result is here?</td><td>every result links to its record; the same query gives the same answer twice</td></tr>
+      <tr><td><strong>Control</strong></td><td>Can the user steer the outcome?</td><td>the user changes what similar means, and the results follow</td></tr>
+      <tr><td><strong>Access</strong></td><td>Who can use it?</td><td>screen reader, voice, plain language, a second language</td></tr>
+      <tr><td><strong>Discovery</strong></td><td>Does it find the weird things?</td><td>measures beyond accuracy: diversity, serendipity, dissimilar items</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>Agents are welcome in every area. How you build is your choice.</p>
+
+  <h3>Topics</h3>
+  <p>Some examples of methods we would like to see: retrieval over image, text and layout
+  at the same time; embeddings for every kind of object, and an account of what they miss;
+  re-ranking that improves a result list without burying it; retrieval-augmented
+  generation (RAG) that cites its sources and says where it found nothing; agents that
+  search on a user's behalf and keep a log of what they did; vision-language models that
+  read handwriting; search across languages, scripts and the eight spellings of one
+  village; detection of copies, forgeries and near-duplicates; recommendation and
+  exploration as an alternative to the query box; knowledge graphs and linked open data;
+  evaluation beyond accuracy; and the cost of one query in watts.</p>
+  <p>Some examples of material: charters with and without seals; manuscripts with their
+  marginalia and doodles; newspapers with text recognition from 2009; letters, diaries and
+  account books; maps that disagree with each other; museum objects described in three
+  words; photographs without captions; audio, film and 3D scans; catalogue cards that
+  describe other catalogue cards; and metadata in every standard, and in none.</p>
+</section>
+
+<section id="who">
+  <h2>Who can come</h2>
+  <p>We invite students, researchers, practitioners and experts from academia, memory
+  institutions and industry: hackers, people from natural language processing (NLP) and
+  computer vision (CV), data stewards, curators, archivists, librarians and designers.
+  You do not have to code. You bring something the room can work with: a skill, a
+  dataset, or a problem you know well. We especially encourage people of genders
+  underrepresented in tech to register.</p>
+  <p>The invitation goes to the institutions of CLARIAH-AT, to partner universities, and
+  to CLARIN and DARIAH institutions in the countries around Austria and beyond. Places are
+  limited. We read every registration, and we put the room together so that the teams are
+  strong and mixed.</p>
+  <p>The event language is English. A little German in the team helps, because some
+  datasets have German in them. Hacking is on site only.</p>
+
+  <h3>Teams</h3>
+  <p>Come prepared, and bring part of your lab: one or two coders, one or two people from
+  the domain, from human-computer interaction (HCI) or from design, and a dataset or a
+  problem you know well. A team that arrives with its question can spend the whole two
+  days on hacking. A team has two to five people. Everybody registers alone; a team is
+  accepted as a whole and comes as it has registered.</p>
+  <p>If you have no team yet, register anyway and say that you are looking for one. You
+  then get the link to a chat room where people find partners and teams. When you have a
+  team, add its name to your registration; you can change your registration until
+  1 November. On Monday, a pitch can still end with "we need", and you can join a team
+  there.</p>
+  <p>The teams work on different problems, but they share one room. Asking the team next
+  to you, showing them what you have, and passing on a trick are part of the two days.
+  The winners get small prizes and the attention of the room. Everybody else gets the
+  same room, the same food and the same clusters.</p>
+
+  <h3>What we bring</h3>
+  <ul>
+    <li>rooms, and 15 or more hours of hacking time, depending on your endurance;</li>
+    <li>the <a href="https://dhinfra.at">DHinfra</a> clusters, run in Graz, with current
+    open-weights models hosted for you and the graphics processors (GPUs) of the clusters
+    at your disposal. Bring your own laptop;</li>
+    <li>two impulse talks, one by a domain expert and one by a technical expert;</li>
+    <li>warm and cold food, snacks, coffee and tea throughout both days;</li>
+    <li>one special and a few more general prepared datasets on Austrian cultural
+    heritage, announced by 15 November;</li>
+    <li>support for travel and accommodation, for those who need it.</li>
+  </ul>
+</section>
+
+<section id="dataset">
+  <h2>Your dataset</h2>
+  <p>Prepare your own data and your own problem, and describe the dataset in the
+  registration. It does not have to be large or famous. It needs modalities we can work
+  with, and it should be ready or nearly ready. A link to the dataset, or to a large
+  subset of it, helps us confirm that it can be worked with.</p>
+  <p>If you can share the dataset with the other teams during the event, and if others may
+  reuse it afterwards, that is a bonus. Teams with a dataset come first when places are
+  short.</p>
+  <p>If you bring no dataset, you can work on one of ours. We announce them by 15 November,
+  so prepare your own problem in the meantime.</p>
+
+  <details id="dataset-sheet">
+    <summary>What the registration asks about your dataset (if you have one)</summary>
+    <p>Four questions, answered once per team by its contact person.</p>
+    <div class="scroll">
+    <table>
+      <tbody>
+        <tr><td><strong>Name</strong></td><td>of the dataset</td></tr>
+        <tr><td><strong>What it is, and what you fail to find in it today</strong></td><td>a few sentences. Where you know it, mention material, period, institution, size, language and modalities</td></tr>
+        <tr><td><strong>Link or pointer</strong></td><td>to the dataset or to a large subset, if you have one</td></tr>
+        <tr><td><strong>Rights</strong></td><td>tick what applies: the other teams may use it during the event; others may reuse it afterwards; we may list it on this page; results may be published</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </details>
+</section>
+
+<section id="schedule">
+  <h2>Schedule</h2>
+
+  <h3>Sunday 29 November</h3>
+  <p>Arrival, and a get-together from 18:00 at your own cost. Registered participants get
+  the place by mail.</p>
+
+  <h3>Day 1, Monday 30 November</h3>
+  <div class="scroll">
+  <table>
+    <tbody>
+      <tr><td class="time">09:00</td><td>Registration</td></tr>
+      <tr><td class="time">09:30</td><td>Welcome</td></tr>
+      <tr><td class="time">10:00</td><td>Impulse talk by a domain expert: what do cultural heritage experts hope AI can do for searching and finding material?</td></tr>
+      <tr><td class="time">11:15</td><td>Pitches, two minutes per team</td></tr>
+      <tr class="key"><td class="time">12:00</td><td>Hacking starts</td></tr>
+      <tr><td class="time">20:00</td><td>Impulse talk by a technical expert. The venue stays open into the night</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>Day 2, Tuesday 1 December</h3>
+  <div class="scroll">
+  <table>
+    <tbody>
+      <tr><td class="time">08:00</td><td>Doors open</td></tr>
+      <tr class="key"><td class="time">15:00</td><td>End of hacking</td></tr>
+      <tr><td class="time">15:30</td><td>Presentations, three minutes per team</td></tr>
+      <tr><td class="time">16:30</td><td>Award ceremony</td></tr>
+      <tr><td class="time">17:00</td><td>End</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <p>The two impulse talks are streamed live with their Q&amp;A. Nothing is recorded. If
+  you ask a question in the room, the online audience hears it.</p>
+</section>
+
+<section id="dates">
+  <h2>Dates</h2>
+  <div class="scroll">
+  <table>
+    <tbody>
+      <tr class="key" data-date="2026-11-01"><td class="date">1 November</td><td>registration closes</td></tr>
+      <tr data-date="2026-11-04"><td class="date">4 November</td><td>confirmations, with your support for travel and accommodation</td></tr>
+      <tr data-date="2026-11-15"><td class="date">15 November</td><td>datasets published</td></tr>
+      <tr data-date="2026-11-23"><td class="date">23 November</td><td>cluster accounts and access</td></tr>
+      <tr data-date="2026-11-29"><td class="date">29 November</td><td>arrival, get-together</td></tr>
+      <tr data-date="2026-11-30"><td class="date">30 November</td><td>day 1, from 09:00</td></tr>
+      <tr data-date="2026-12-01"><td class="date">1 December</td><td>day 2, until 17:00</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>All times are Central European Time (CET). A deadline ends at 23:59 on its day.</p>
+</section>
+
+<section id="travel">
+  <h2>Travel and accommodation</h2>
+  <p>Everybody can ask for support for travel and accommodation. Say in the registration
+  where you travel from, what it costs, and whether you can come without support. You get
+  your amount with the confirmation on 4 November, so that you can book. The money is
+  paid after the event.</p>
+  <p>Accommodation covers the night from Monday to Tuesday for everybody who comes from
+  outside Graz. It covers the night from Sunday to Monday if you cannot reach Graz by
+  09:00 on Monday otherwise. It covers the night from Tuesday to Wednesday if you cannot
+  travel home after 17:00 on Tuesday.</p>
+</section>
+
+<section id="conduct">
+  <h2>Conduct</h2>
+  <p>Be kind to each other. Everybody in the room cares about this material, and that is
+  enough common ground.</p>
+
+  <details id="code-of-conduct">
+    <summary>The code of conduct</summary>
+    <p>It holds in the rooms, at the evening, in the chat rooms and in the code.</p>
+    <ul>
+      <li>Come prepared, and help the people around you get up to speed.</li>
+      <li>Questions are more than welcome.</li>
+      <li>No harassment, no discrimination, no unwanted attention.</li>
+      <li>Ask before you photograph or record somebody.</li>
+      <li>Credit what you use. Data comes with licences and with people; keep both intact.</li>
+      <li>Try to say what a model did and what you did.</li>
+      <li>Look after each other, also in the evening.</li>
+    </ul>
+  </details>
+
+  <p>If something is wrong, tell an organiser on site or write to
+  <a href="mailto:crash.organizers@gmail.com">crash.organizers@gmail.com</a>. We treat it
+  as confidential and decide the next step together with you. The organisers can ask a
+  person to leave the event.</p>
+
+  <h3>Photos</h3>
+  <p>We take photos of the event. In the registration you say whether photos may show
+  you. We do not publish a photo of anybody who said no.</p>
+
+  <h3>Footprint</h3>
+  <p>We measure the footprint of the event, in CO2 and in compute, and we publish it.</p>
+</section>
+
+<section id="venue">
+  <h2>Venue</h2>
+  <p>UNICORN Startup &amp; Innovation Hub<br>
+  Schubertstraße 6a, 8010 Graz, Austria<br>
+  Top floor, conference deck.</p>
+  <p>The building is barrier-free, with a lift and automatic door openers. A second place
+  for hacking is close by: the meeting and office rooms at Elisabethstraße 59/III.</p>
+</section>
+
+<section id="register">
+  <h2>Register</h2>
+  <div class="call">
+    <p class="deadline">open until 1 November 2026</p>
+    <p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSedGMWk_5j9vuKFYqlyHlquNodJ5MBa7e7rzCRQpXBqIcviow/viewform">open the registration form</a></p>
+    <p>Register early. When places or travel money are short, earlier registrations and
+    teams with a dataset come first. Everybody else goes on a waiting list.</p>
+  </div>
+  <p>After the event, we show the results here: the teams and what they built. We ask every
+  team to share its code under Apache-2.0 or MIT, in its own repository or under
+  <a href="https://github.com/crash-this">crash-this</a>. Copyright stays with the
+  authors.</p>
+</section>
+
+<section id="organisers">
+  <h2>Organisers</h2>
+  <p>Florian Atzenhofer-Baumgartner, Chiara Citro, David Fleischhacker, Bernhard Geiger,
+  Hussain Hussain, Roman Kern, Dominik Kowald, Elisabeth Raunig and Thea Schaaf.</p>
+  <p>We work at the Department of Digital Humanities of the University of Graz, at Graz
+  University of Technology and at Know Center.</p>
+  <p>CRASH is funded by CLARIAH-AT. For questions, and for sponsoring, write to
+  <a href="mailto:crash.organizers@gmail.com">crash.organizers@gmail.com</a>.</p>
+</section>
+
+</main>
+
+<footer class="site">
+  <p id="imprint">Imprint: Florian Atzenhofer-Baumgartner, Elisabethstraße 59/III, 8010 Graz, Austria,
+  <a href="mailto:crash.organizers@gmail.com">crash.organizers@gmail.com</a>.
+  This page is hosted on GitHub Pages and sets no cookies.</p>
+</footer>
+</div>
+</div>
+</body>
+</html>
