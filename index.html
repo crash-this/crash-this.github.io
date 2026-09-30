@@ -33,6 +33,11 @@
     <a href="#venue">venue</a>
     <a href="#register" class="go">register</a>
   </nav>
+  <form class="prompt" autocomplete="off">
+    <label for="cmd">$</label>
+    <input id="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-label="Command line. Type help for the commands.">
+  </form>
+  <p class="prompt-out" aria-live="polite"></p>
   <div class="controls">
     <p>effects</p>
     <button type="button" data-set-fx="on">on</button><button type="button" data-set-fx="off">off</button>

@@ -46,6 +46,38 @@ a:hover { background: var(--hot); color: var(--on-hot); text-decoration: none; }
 .side nav a:hover, .side nav a[aria-current] { color: var(--hot); background: none; }
 .side nav a.go { color: var(--hot); }
 .side nav a.go::after { content: " <-"; }
+.prompt { margin-top: 1.5rem; display: flex; gap: 0.5em; align-items: baseline; }
+.prompt label { color: var(--hot); }
+.prompt input {
+  flex: 1; min-width: 0; font: inherit; color: var(--fg); background: none; border: 0;
+  border-bottom: 1px solid var(--line); padding: 0.15rem 0; caret-color: var(--hot);
+}
+.prompt input::placeholder { color: var(--dim); opacity: 0.6; }
+.prompt input:focus { outline: none; border-bottom-color: var(--hot); }
+.prompt-out { margin: 0.4rem 0 0; min-height: 1.5em; color: var(--dim); white-space: pre-wrap; }
+
+.fall { transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.7s; }
+.crashed .fall {
+  transform: translate(var(--dx), 110vh) rotate(var(--rot)); opacity: 0;
+  transition: transform 1s cubic-bezier(0.55, 0, 1, 0.45) var(--delay), opacity 0.9s ease-in var(--delay);
+}
+.crashed body { overflow: hidden; }
+#panic {
+  position: fixed; inset: 0; z-index: 30; background: #000; color: var(--fg);
+  font: 0.9375rem/1.6 var(--mono); padding: 2rem; overflow: auto;
+  opacity: 0; transition: opacity 0.5s ease-out;
+}
+#panic.on { opacity: 1; }
+#panic .line { display: block; opacity: 0; transition: opacity 0.12s; }
+#panic .line.on { opacity: 1; }
+#panic pre { margin: 0 0 1.5rem; white-space: pre-wrap; }
+#panic .err { color: var(--hot2); }
+#panic button {
+  font: inherit; color: var(--on-hot); background: var(--hot); border: 0; padding: 0.6rem 1rem;
+  cursor: pointer;
+}
+@media (prefers-reduced-motion: reduce) { .fall, #panic, #panic .line { transition: none; } }
+
 .controls { margin-top: auto; padding-top: 1.5rem; color: var(--dim); }
 .controls button {
   font: inherit; color: var(--fg); background: none; border: 1px solid var(--line);
@@ -198,7 +230,7 @@ article section:first-child { counter-increment: none; padding-top: 4.5rem; }
   :root { --bg: #fff; --bg2: #fff; --fg: #000; --dim: #444; --line: #bbb; --hot: #000; --hot2: #000; --on-hot: #fff; --todo: #ddd; }
   body { font-size: 11pt; background: #fff !important; }
   body::after { display: none !important; }
-  .side, .button, .skip { display: none; }
+  .side, .button, .skip, #panic { display: none; }
   details > :not(summary) { display: block; }
   .shell { display: block; max-width: none; padding: 0; }
   .hero { padding-top: 0; }
