@@ -94,14 +94,20 @@
   }
 
   var panicText = [
-    "[   13.370000] Kernel panic - not syncing: CRASH",
-    "[   13.370001] CPU: 0 PID: 1 Comm: search Not tainted 2026.11.30-graz",
-    "[   13.370002] Call Trace:",
-    "[   13.370003]  similarity+0x2a/0x40",
-    "[   13.370004]  relevance+0x11/0x20",
-    "[   13.370005]  vibes+0x7f/0x80",
-    "[   13.370006]  checks+0x0/0x0",
-    "[   13.370007] ---[ end Kernel panic - not syncing: CRASH ]---"
+    "[   13.370412] BUG: kernel NULL pointer dereference, address: 0000000000000000",
+    "[   13.370415] #PF: supervisor instruction fetch in kernel mode",
+    "[   13.370418] Oops: 0010 [#1] PREEMPT SMP",
+    "[   13.370421] CPU: 0 PID: 1 Comm: search Not tainted 6.18.0-crash #1",
+    "[   13.370424] Hardware name: CRASH, Graz, 30 November 2026",
+    "[   13.370427] RIP: 0010:checks+0x0/0x0",
+    "[   13.370430] Call Trace:",
+    "[   13.370431]  <TASK>",
+    "[   13.370433]  vibes+0x7f/0x80",
+    "[   13.370436]  relevance+0x11/0x20",
+    "[   13.370439]  similarity+0x2a/0x40",
+    "[   13.370442]  </TASK>",
+    "[   13.370445] Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000009",
+    "[   13.370448] ---[ end Kernel panic - not syncing: Attempted to kill init! exitcode=0x00000009 ]---"
   ].join("\n");
 
   function still() { return calm || fx !== "on"; }
@@ -137,7 +143,7 @@
     box.appendChild(pre);
     var tail = document.createElement("div");
     tail.className = "line";
-    tail.innerHTML = '<p>You are in emergency mode.</p><p><button type="button">Press Enter to reboot</button></p>';
+    tail.innerHTML = '<p><button type="button">Press Enter to reboot</button></p>';
     box.appendChild(tail);
     document.body.appendChild(box);
     root.classList.add("crashed");
