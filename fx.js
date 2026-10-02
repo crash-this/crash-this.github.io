@@ -131,9 +131,17 @@
     var box = document.createElement("div");
     box.id = "panic";
     box.setAttribute("role", "alertdialog");
-    box.setAttribute("aria-label", "The page crashed");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Crash screen");
+    box.setAttribute("aria-describedby", "panic-note");
+    var note = document.createElement("p");
+    note.id = "panic-note";
+    note.className = "sr-only";
+    note.textContent = "A joke screen in the style of a Linux kernel crash. Nothing is broken. The button brings the page back.";
+    box.appendChild(note);
     var pre = document.createElement("pre");
     pre.className = "err";
+    pre.setAttribute("aria-hidden", "true");
     panicText.split("\n").forEach(function (text) {
       var line = document.createElement("span");
       line.className = "line";
@@ -146,6 +154,8 @@
     tail.innerHTML = '<p><button type="button">Press Enter to reboot</button></p>';
     box.appendChild(tail);
     document.body.appendChild(box);
+    document.querySelector(".shell").inert = true;
+    box.addEventListener("keydown", function (e) { if (e.key === "Escape") reboot(); });
     root.classList.add("crashed");
     var lines = box.querySelectorAll(".line");
     var step = still() ? 0 : 70;
@@ -162,6 +172,7 @@
     var box = document.getElementById("panic");
     scrollTo(0, 0);
     root.classList.remove("crashed");
+    document.querySelector(".shell").inert = false;
     if (box) {
       box.classList.remove("on");
       setTimeout(function () { box.remove(); }, still() ? 0 : 500);

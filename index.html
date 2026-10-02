@@ -35,8 +35,9 @@
   </nav>
   <form class="prompt" autocomplete="off">
     <label for="cmd">$</label>
-    <input id="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-label="Command line. Type help for the commands.">
+    <input id="cmd" type="text" spellcheck="false" autocapitalize="off" placeholder="type help" aria-label="Command line" aria-describedby="cmd-note">
   </form>
+  <p id="cmd-note" class="sr-only">An extra for fun, not needed to use the page. Type help for the commands.</p>
   <p class="prompt-out" aria-live="polite"></p>
   <div class="controls">
     <p>effects</p>
@@ -401,7 +402,7 @@
   <h2>Register</h2>
   <div class="call">
     <p class="deadline">open until 1 November 2026</p>
-    <p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSedGMWk_5j9vuKFYqlyHlquNodJ5MBa7e7rzCRQpXBqIcviow/viewform" target="_blank" rel="noopener">open the registration form</a></p>
+    <p><a class="button" href="https://docs.google.com/forms/d/e/1FAIpQLSedGMWk_5j9vuKFYqlyHlquNodJ5MBa7e7rzCRQpXBqIcviow/viewform" target="_blank" rel="noopener">open the registration form<span class="sr-only"> (opens in a new tab)</span></a></p>
     <p>Register early. When places or travel money are short, earlier registrations and
     teams with a dataset come first. Everybody else goes on a waiting list.</p>
   </div>
