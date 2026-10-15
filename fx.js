@@ -201,9 +201,10 @@
   function run(line) {
     switch (line.trim().toLowerCase()) {
       case "": case "clear": return "";
-      case "help": return "commands: help, clear, manifesto, register, crash";
+      case "help": return "commands: help, clear, manifesto, register, share, crash";
       case "manifesto": case "manifest": go("manifesto"); return "";
       case "register": go("register"); return "see you on 30 november.";
+      case "share": go("share"); return "bring a friend.";
       case "crash": crash(); return "";
       default: return line.trim() + ": command not found. try help";
     }
@@ -217,6 +218,30 @@
     input.value = "";
   });
 
+  var url = "https://crash-this.github.io/";
+  function say(text) {
+    var out = document.querySelector(".share-out");
+    if (out) out.textContent = text;
+  }
+  function copy(text) {
+    if (!navigator.clipboard) { say("select the text and copy it by hand."); return; }
+    navigator.clipboard.writeText(text).then(
+      function () { say("copied."); },
+      function () { say("select the text and copy it by hand."); });
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-copy], [data-copy-link], [data-share]");
+    if (!b) return;
+    var text = document.getElementById("share-text").textContent;
+    if (b.hasAttribute("data-copy")) copy(text);
+    else if (b.hasAttribute("data-copy-link")) copy(url);
+    else navigator.share({ title: "CRASH", text: text }).catch(function () {});
+  });
+  function share() {
+    var b = document.querySelector("[data-share]");
+    if (b && navigator.share) b.hidden = false;
+  }
+
   addEventListener("hashchange", reveal);
-  document.addEventListener("DOMContentLoaded", function () { apply(); marks(); reveal(); spy(); });
+  document.addEventListener("DOMContentLoaded", function () { apply(); marks(); reveal(); spy(); share(); });
 })();

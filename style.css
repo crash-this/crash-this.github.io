@@ -113,6 +113,13 @@ a:hover { background: var(--hot); color: var(--on-hot); text-decoration: none; }
 }
 .button::before { content: "$ "; opacity: 0.6; }
 .button:hover { background: transparent; color: var(--hot); }
+.button.alt { background: transparent; color: var(--hot); padding: 0.7rem 1rem; font-size: 0.875rem; cursor: pointer; }
+.button.alt:hover { background: var(--hot); color: var(--on-hot); }
+
+.share-text { margin: 0 0 1rem; padding: 1rem 1.2rem; border: 1px solid var(--line); background: var(--bg2); font: 0.875rem/1.6 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere; }
+.share-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+.share-actions [hidden] { display: none; }
+.share-out { min-height: 1.6em; }
 
 /* Sections */
 main { counter-reset: sec; }
