@@ -41,7 +41,7 @@ a:hover { background: var(--hot); color: var(--on-hot); text-decoration: none; }
 .side .home { color: var(--fg); text-decoration: none; font-size: 1rem; }
 .side .home b { color: var(--hot); font-weight: 400; }
 .side nav { margin-top: 1.5rem; display: flex; flex-direction: column; }
-.side nav a { color: var(--dim); text-decoration: none; padding: 0.22rem 0; }
+.side nav a { color: var(--dim); text-decoration: none; padding: 0.22rem 0 0.22rem 3ch; text-indent: -3ch; }
 .side nav a::before { content: "├─ "; color: var(--line); }
 .side nav a:last-child::before { content: "└─ "; }
 .side nav a:hover, .side nav a[aria-current] { color: var(--hot); background: none; }
@@ -223,6 +223,7 @@ article section:first-child { counter-increment: none; padding-top: 4.5rem; }
   .shell { grid-template-columns: minmax(0, 1fr); padding: 0 1rem; }
   .side { position: static; height: auto; padding: 1rem 0; border-bottom: 1px solid var(--line); }
   .side nav { flex-direction: row; flex-wrap: wrap; gap: 0 1rem; margin-top: 0.6rem; }
+  .side nav a { padding-left: 0; text-indent: 0; }
   .side nav a::before, .side nav a:last-child::before { content: none; }
   .controls { margin-top: 0.6rem; padding-top: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.4rem; }
   .controls p { margin: 0.2rem 0.3rem 0 0; }
