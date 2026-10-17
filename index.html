@@ -64,7 +64,11 @@
 <a class="skip" href="#main">Skip to the content</a>
 <div class="shell">
 <aside class="side">
-  <a class="home" href="#top">~/<b>crash</b>-2026</a>
+  <div class="bar">
+    <a class="home" href="#top">~/<b>crash</b>-2026</a>
+    <button type="button" class="menu" aria-expanded="false" aria-controls="menu" hidden>menu</button>
+  </div>
+  <div class="menu-panel" id="menu">
   <nav aria-label="Sections">
     <a href="#why">why</a>
     <a href="#tracks">vibes and checks</a>
@@ -88,6 +92,7 @@
   <div class="controls">
     <p>effects</p>
     <button type="button" data-set-fx="on">on</button><button type="button" data-set-fx="off">off</button>
+  </div>
   </div>
 </aside>
 <div class="col">
@@ -200,7 +205,7 @@
   for that area: what it tested, and how. There are two rankings, one by the room and one
   by the jury, each with places one to three. The prizes are small and symbolic.</p>
   <div class="scroll">
-  <table>
+  <table class="areas">
     <thead><tr><th>Area</th><th>Question</th><th>Example of a check</th></tr></thead>
     <tbody>
       <tr><td><strong>Efficiency</strong></td><td>What does one search cost?</td><td>time, compute and energy per query</td></tr>

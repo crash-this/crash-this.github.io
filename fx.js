@@ -45,6 +45,21 @@
 
   }
 
+  function menu() {
+    var button = document.querySelector(".menu");
+    var panel = document.getElementById("menu");
+    if (!button || !panel) return;
+    button.hidden = false;
+    function set(open) {
+      root.dataset.menu = open ? "open" : "closed";
+      button.setAttribute("aria-expanded", String(open));
+      button.textContent = open ? "close" : "menu";
+    }
+    set(false);
+    button.addEventListener("click", function () { set(root.dataset.menu === "closed"); });
+    panel.addEventListener("click", function (e) { if (e.target.closest("nav a")) set(false); });
+  }
+
   function reveal() {
     var id = decodeURIComponent(location.hash.slice(1));
     var el = id && document.getElementById(id);
@@ -243,5 +258,5 @@
   }
 
   addEventListener("hashchange", reveal);
-  document.addEventListener("DOMContentLoaded", function () { apply(); marks(); reveal(); spy(); share(); });
+  document.addEventListener("DOMContentLoaded", function () { apply(); marks(); menu(); reveal(); spy(); share(); });
 })();
