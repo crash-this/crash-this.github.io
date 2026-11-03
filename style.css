@@ -112,6 +112,7 @@ a:hover { background: var(--hot); color: var(--on-hot); text-decoration: none; }
   background: var(--hot); color: var(--on-hot); text-decoration: none; border: 1px solid var(--hot);
 }
 .button::before { content: "$ "; opacity: 0.6; }
+.button .by { white-space: nowrap; }
 .button:hover { background: transparent; color: var(--hot); }
 .button.alt { background: transparent; color: var(--hot); padding: 0.7rem 1rem; font-size: 0.875rem; cursor: pointer; }
 .button.alt:hover { background: var(--hot); color: var(--on-hot); }
